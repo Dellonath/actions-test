@@ -26,6 +26,6 @@ def test_dict_info():
     assert client_dict == {
         'id': 'hex32',
         'name': 'test',
-        'age': 992,
+        'age': 99,
         'objects': ['test1', 'test2']
     }
