@@ -31,3 +31,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest src/tests/client-test.py
+    - name: Test Environment Variable
+      run: |
+        echo ${TESTE_VAR} ${text_color}
