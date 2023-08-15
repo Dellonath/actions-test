@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      tester_name: Tester
+      yml_variable: Tester
 
     steps:
     - uses: actions/checkout@v3
@@ -34,7 +34,20 @@ jobs:
     - name: Test with pytest
       run: |
         pytest src/tests/client-test.py
-    - name: Test Environment Variable
+        
+    - name: yml variable
       run: |
-        echo "Hello, $tester_name. My Environment Variable ENV_VAR has value: ${{ env.ENV_VAR }}" 
+        echo "yml variable value: $yml_variable" 
+    - name: repo variable
+      run: |
+        echo "repo variable value: ${{ env.SECRET_KEY }}"
+    - name: repo secret
+      run: |
+        echo "repo secret value: ${{ secrets.SECRET_KEY }}" 
+    - name: custom dev variable
+      run: |
+        echo "custom dev variable value: ${{ dev.ENV_VAR }}" 
+    - name: custom dev secret
+      run: |
+        echo "custom dev secret value: ${{ dev.secrets.ENV_VAR }}"
         
