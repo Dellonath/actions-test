@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      greeting: Hello, Tester
+      tester_name: Tester
 
     steps:
     - uses: actions/checkout@v3
@@ -36,5 +36,5 @@ jobs:
         pytest src/tests/client-test.py
     - name: Test Environment Variable
       run: |
-        echo "$greeting $VAR_TEST. Today is! ${{env.VAR_TEST}}"
+        echo "Hello, $tester_name. My Environment Variable ENV_VAR has value: ${{env.ENV_VAR}}" 
         
