@@ -34,6 +34,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest src/tests/client-test.py
+    - name: Checking all env variables
+      run: |
+        python3 src/tests/client-test.py
         
     - name: yml variable
       run: |
