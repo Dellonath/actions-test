@@ -40,7 +40,7 @@ jobs:
         echo "yml variable value: $yml_variable" 
     - name: repo variable
       run: |
-        echo "repo variable value: ${{ env.SECRET_KEY }}"
+        echo "repo variable value: ${{ vars.ENV_VAR }}"
     - name: repo secret
       run: |
         echo "repo secret value: ${{ secrets.SECRET_KEY }}" 
