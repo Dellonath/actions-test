@@ -33,4 +33,4 @@ jobs:
         pytest src/tests/client-test.py
     - name: Test Environment Variable
       run: |
-        echo ${VAR:TESTE_VAR}
+        echo {{TESTE_VAR}}
