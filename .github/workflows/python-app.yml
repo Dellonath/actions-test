@@ -36,5 +36,5 @@ jobs:
         pytest src/tests/client-test.py
     - name: Test Environment Variable
       run: |
-        echo "Hello, $tester_name. My Environment Variable ENV_VAR has value: ${{env.ENV_VAR}}" 
+        echo "Hello, $tester_name. My Environment Variable ENV_VAR has value: ${{ env.ENV_VAR }}" 
         
